@@ -15,6 +15,12 @@ namespace CatalogService.API.Controllers
         }
 
         [HttpGet]
+        public IActionResult Health()
+        {
+            return Ok("Ok");
+        }
+
+        [HttpGet]
         public IActionResult GetAll()
         {
             var products = _productAppService.GetAll();
